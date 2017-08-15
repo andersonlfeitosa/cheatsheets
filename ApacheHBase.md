@@ -37,6 +37,17 @@ put 'table_name', 'row_key', 'columnfamily_name:attribute_name', 'value'
 get 'table_name', 'row_key'
 ```
 
+### Get all versions of a row
+```
+get 'table_name', 'row_key', { COLUMN => 'columnfamily_name:attribute_name', VERSIONS => 5 }
+```
+
+### Config table to persist versions
+```
+alter 'table_name', NAME => 'columnfamily_name', VERSIONS => 5
+alter 'table_name', NAME => 'attribute_name', VERSIONS => 5
+```
+
 ### Drop table
 ```
 disable 'table_name'

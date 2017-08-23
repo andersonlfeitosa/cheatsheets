@@ -22,6 +22,12 @@ list
 scan 'table_name'
 ```
 
+### Scan table by partial key
+```
+scan 'table_name', {ROWPREFIXFILTER => 'abc'}
+scan 'table_name', {STARTROW => 'abc', ENDROW => 'abd'}
+```
+
 ### Create table
 ```
 create 'table_name', 'columnfamily_name'

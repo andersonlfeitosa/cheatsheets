@@ -64,3 +64,8 @@ drop 'table_name'
 ```
 truncate 'table_name'
 ```
+
+### Count rows (from command line)
+```
+hbase org.apache.hadoop.hbase.mapreduce.RowCounter <tablename>
+```

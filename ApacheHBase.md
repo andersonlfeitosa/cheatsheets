@@ -28,6 +28,11 @@ scan 'table_name', {ROWPREFIXFILTER => 'abc'}
 scan 'table_name', {STARTROW => 'abc', ENDROW => 'abd'}
 ```
 
+### Scan table by field
+```
+scan 'table_name', { COLUMNS => 'columnfamily_name:attribute_name', FILTER => "ValueFilter(=, 'binary:value')", LIMIT => 10 }
+```
+
 ### Create table
 ```
 create 'table_name', 'columnfamily_name'

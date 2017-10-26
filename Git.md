@@ -111,3 +111,8 @@ git checkout -d app-1.0.1
 git merge hotfix
 ```
 
+### Change remote URL 
+```
+git remote set-url origin new_url
+```
+

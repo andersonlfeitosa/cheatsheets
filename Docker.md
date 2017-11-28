@@ -12,3 +12,7 @@ docker-machine create --driver virtualbox default
 docker-machine ls
 ```
 
+### List images from internal docker registry
+```
+curl -X GET http://192.168.99.100:5000/v2/_catalog
+```

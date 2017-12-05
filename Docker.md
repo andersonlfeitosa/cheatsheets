@@ -16,3 +16,37 @@ docker-machine ls
 ```
 curl -X GET http://192.168.99.100:5000/v2/_catalog
 ```
+
+### Check running containers
+```
+docker ps
+docker ps -a 
+```
+
+### Remove container
+```
+docker rm -f container_name
+docker rm -v $(docker ps -a -q -f status=exited)
+```
+
+### Run Docker Registry
+```
+docker run -d -p 5000:5000 --name registry registry:2
+docker run -d --name container_name --restart=always -p 8080:8080 image_name
+```
+
+### Remove images not used by containers
+```
+docker rmi $(docker images -f "dangling=true" -q)
+```
+
+### Build new images
+```
+docker build --no-cache -t remote_docker_registry:5000/ubuntu/my-image
+docker build -t hello-app .
+```
+
+### Build new images
+```
+docker push remote_docker_registry:5000/ubuntu/my-image
+```

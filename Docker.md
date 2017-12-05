@@ -46,7 +46,7 @@ docker build --no-cache -t remote_docker_registry:5000/ubuntu/my-image
 docker build -t hello-app .
 ```
 
-### Build new images
+### Push new images
 ```
 docker push remote_docker_registry:5000/ubuntu/my-image
 ```

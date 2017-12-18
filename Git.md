@@ -116,3 +116,8 @@ git merge hotfix
 git remote set-url origin new_url
 ```
 
+### Change remote URL 
+```
+git push origin --delete branch_name
+```
+

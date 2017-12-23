@@ -119,5 +119,8 @@ git remote set-url origin new_url
 ### Delete remote Branch
 ```
 git push origin --delete branch_name
+
+When remote branch was deleted but it continues on local
+git remote prune origin
 ```
 

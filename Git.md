@@ -86,6 +86,12 @@ git push origin app-1.0.0
 
 Send all tags to origin:
 git push origin --tags
+
+Delete a local tag
+git tag -d test-1.0.0
+
+Delete a remote tag
+git push origin :refs/tags/test-1.0.0
 ```
 
 ### Branch
@@ -104,6 +110,12 @@ git push origin app-1.0.1
 
 Delete branch:
 git checkout -d app-1.0.1
+
+Delete remote Branch:
+git push origin --delete branch_name
+
+When remote branch was deleted but it continues on local:
+git remote prune origin
 ```
 
 ### Merge (on specific branch)
@@ -115,12 +127,3 @@ git merge hotfix
 ```
 git remote set-url origin new_url
 ```
-
-### Delete remote Branch
-```
-git push origin --delete branch_name
-
-When remote branch was deleted but it continues on local
-git remote prune origin
-```
-

@@ -28,6 +28,10 @@ docker ps -a
 docker rm -f container_name
 docker rm -v $(docker ps -a -q -f status=exited)
 ```
+### Tag container
+```
+docker tag my_image andersonlfeitosa/my_image
+```
 
 ### Run Docker Registry
 ```

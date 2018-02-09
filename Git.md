@@ -92,6 +92,9 @@ git tag -d test-1.0.0
 
 Delete a remote tag
 git push origin :refs/tags/test-1.0.0
+or
+git push origin --delete test-1.0.0
+
 ```
 
 ### Branch

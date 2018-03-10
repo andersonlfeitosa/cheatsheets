@@ -41,4 +41,3 @@ oc get all -l app=service-registry
 ```
 oc delete all -l app=service-registry
 ```
-

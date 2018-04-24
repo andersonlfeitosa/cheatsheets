@@ -9,7 +9,7 @@ oc cluster up --host-data-dir=openshift --host-config-dir=openshift --use-existi
 
 ### Scale down app to zero pods or idle
 ````
-for a in `oc get dc | awk -F' ' '{print $1}'`; do { oc scale --replicas=0 dc $a; }; done
+for a in `oc get dc --no-headers | awk -F' ' '{print $1}'`; do { oc scale --replicas=0 dc $a; }; done
 for a in `oc get dc | awk -F' ' '{ print $1 }'`; do { oc idle $a; }; done
 ````
 

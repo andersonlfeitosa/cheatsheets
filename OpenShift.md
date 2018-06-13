@@ -13,8 +13,19 @@ for a in `oc get dc --no-headers | awk -F' ' '{print $1}'`; do { oc scale --repl
 for a in `oc get dc | awk -F' ' '{ print $1 }'`; do { oc idle $a; }; done
 ````
 
+###
+yum install atomic-openshift-utils
+cd /etc/ansible; 
+ansible-playbook playbooks/pre-req.yml
+ansible-playbook playbooks/anti-treta.yml
+
+cd /usr/share/openshift-ansible/playbooks
+
 ### Cluster adm
 ```
+ansible -m shell -a "htpasswd -b /etc/origin/master/users.htpasswd superadmin 5\!m5pQe7" masters
+
+
 oc adm policy add-role-to-user cluster-admin anderson.feitosa
 
 oc adm policy add-cluster-role-to-user cluster-admin anderson.feitosa

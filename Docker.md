@@ -12,6 +12,12 @@ docker-machine create --driver virtualbox default
 docker-machine ls
 ```
 
+### Docker Registry Login using OpenShift credentials
+```
+docker login -u developer -p $(oc whoami -t) docker-registry-default.apps.cabal.com.br
+```
+
+
 ### List images from internal docker registry
 ```
 curl -X GET http://192.168.99.100:5000/v2/_catalog

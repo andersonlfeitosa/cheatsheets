@@ -107,9 +107,11 @@ or
 git branch app-1.0.1
 git checkout app-1.0.1
 
+Create branch from tag and switch:
+git checkout -b app-1.0.1 app-1.0.0
+
 Send branch to upstream:
 git push origin app-1.0.1
-
 
 Delete branch:
 git checkout -d app-1.0.1

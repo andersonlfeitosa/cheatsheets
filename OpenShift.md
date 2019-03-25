@@ -51,4 +51,5 @@ oc get all -l app=service-registry
 #### Delete all resources with a label
 ```
 oc delete all -l app=service-registry
+oc delete <<project_name>>
 ```

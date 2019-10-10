@@ -43,7 +43,12 @@ docker tag my_image andersonlfeitosa/my_image
 ```
 docker run -d -p 5000:5000 --name registry registry:2
 docker run -d --name container_name --restart=always -p 8080:8080 image_name
+```
+
+### Run bash into a docker container
+``` 
 docker exec -it <mycontainer> bash
+docker logs <mycontainer> -f
 ```
 
 ### Remove images not used by containers

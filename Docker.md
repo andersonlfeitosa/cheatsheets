@@ -14,7 +14,7 @@ docker-machine ls
 
 ### Docker Registry Login using OpenShift credentials
 ```
-docker login -u developer -p $(oc whoami -t) docker-registry-default.apps.cabal.com.br
+docker login -u developer -p $(oc whoami -t) docker-registry-default.apps.com.br
 ```
 
 

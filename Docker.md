@@ -43,6 +43,7 @@ docker tag my_image andersonlfeitosa/my_image
 ```
 docker run -d -p 5000:5000 --name registry registry:2
 docker run -d --name container_name --restart=always -p 8080:8080 image_name
+docker run -d --name container_name -e some_env_variable=value image_name
 ```
 
 ### Run bash into a docker container

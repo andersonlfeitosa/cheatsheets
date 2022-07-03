@@ -65,6 +65,11 @@ git remote add origin https://github.com/andersonlfeitosa/cheatsheets.git
 git add readme.md
 ```
 
+### Add empty directories
+```
+find . -type d -empty -exec touch {}/.gitkeep \;
+```
+
 ### Commit
 ```
 git commit -m "commit message"

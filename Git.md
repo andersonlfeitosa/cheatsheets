@@ -100,6 +100,9 @@ git push origin :refs/tags/test-1.0.0
 or
 git push origin --delete test-1.0.0
 
+Get all tags
+git fetch --all --tags
+
 ```
 
 ### Branch

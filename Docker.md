@@ -7,6 +7,13 @@ This is a little cheatsheet about [Docker](https://www.docker.com).
 docker-machine create --driver virtualbox default
 ```
 
+### Set specific IP
+```
+echo "ifconfig eth1 192.168.99.100 netmask 255.255.255.0 broadcast 192.168.99.255 up" | docker-machine ssh default sudo tee /var/lib/boot2docker/bootsync.sh > /dev/null
+
+docker-machine regenerate-certs default
+```
+
 ### List all docker machines created
 ```
 docker-machine ls

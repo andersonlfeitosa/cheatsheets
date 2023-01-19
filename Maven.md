@@ -9,3 +9,7 @@ mvn -X -Dmaven.javadoc.skip=true -Dmaven.test.skip=true -Darguments="-Dmaven.tes
 ```
 mvn -X release:rollback -Dmaven.javadoc.skip=true -Dmaven.test.skip=true;
 ```
+
+```
+mvn sonar:sonar -Dsonar.login=jenkinsic -Dsonar.password=senha -Dsonar.host.url=http://sonar.com.br
+```

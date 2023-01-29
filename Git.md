@@ -140,3 +140,19 @@ git merge hotfix
 ```
 git remote set-url origin new_url
 ```
+
+### Mirror repository
+```
+git clone url
+git remote add github url
+git push github --mirror
+```
+
+Isso é o mesmo que:
+
+```
+git clone url
+git remote add github url
+git push github --all 
+git push github --tags 
+```

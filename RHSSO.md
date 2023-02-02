@@ -2,12 +2,10 @@
 
 This is a little cheatsheet about [RH SSO](https://access.redhat.com/products/red-hat-single-sign-on).
 
-### Running Keycloak
+### Running Keycloak using Docker in development mode
 ```
 docker run --name mykeycloak -p 8080:8080 -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:latest start-dev
 ```
-
-
 
 ### Change level log in RH SSO
 ```

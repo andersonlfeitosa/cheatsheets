@@ -156,3 +156,20 @@ git remote add github url
 git push github --all 
 git push github --tags 
 ```
+
+### Remove last local commit
+```
+git reset --hard 
+or 
+git reset --hard HEAD~1
+```
+
+### Remove last remote commit
+```
+git reset --hard 
+or 
+git reset --hard HEAD~1
+
+
+git push --force
+```

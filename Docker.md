@@ -19,6 +19,15 @@ docker-machine regenerate-certs default
 docker-machine ls
 ```
 
+### Docker on MacOS Ventura
+```
+brew install docker
+brew install docker-compose
+brew install colima
+brew reinstall qemu
+colima start -c 4 -m 12 -a x86_64
+```
+
 ### Docker Registry Login using OpenShift credentials
 ```
 docker login -u developer -p $(oc whoami -t) docker-registry-default.apps.com.br

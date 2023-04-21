@@ -18,3 +18,8 @@ netstat -nr
 ```
 sudo killall -HUP mDNSResponder
 ```
+
+## Apps error
+```
+sudo codesign --force --deep --sign - /Applications/Eclipse.app
+```
